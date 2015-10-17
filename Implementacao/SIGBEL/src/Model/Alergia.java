@@ -1,5 +1,5 @@
 package Model;
-//teste
+//testando
 public class Alergia {
 
 	private int idAlergia;
