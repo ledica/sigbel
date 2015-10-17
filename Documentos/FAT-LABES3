@@ -1,0 +1,92 @@
+LABORATÓRIO DE ENGENHARIA DE SOFTWARE
+
+TRABALHO EM PROJETO # 3
+
+ASSUNTO: PROJETO OO (USANDO PADRÃO MVC)
+
+
+
+Parte 1 – Orientações iniciais
+
+Grupos: deverão ser formados por quatro alunos, conforme regras definidas pelo professor.
+
+Data de entrega e apresentação: 30/10/2015 (segunda-feira)
+
+Formatação: profissional respeitando ABNT e conter Capa, Índice, Introdução, Desenvolvimento, Conclusão e Referências Bibliográficas.
+
+
+
+Parte 2 – Conteúdo
+
+
+
+
+
+1ª Página - Capa:
+
+	Logo da Instituição e do Curso (se houver)
+	Título do Trabalho
+	Nomes dos Alunos
+	Curso, Ano e Turma
+	Professor
+	Disciplina
+
+
+
+
+
+
+2ª Página - Índice:
+
+Construir um índice somente dos itens constantes no documento. Não é necessário índice de figuras e tabelas.
+
+
+3ª Página em diante:
+
+
+	Introdução
+
+
+Deve assinalar o sentido do trabalho, mas de nenhum modo antecipar o desenvolvimento nem a conclusão. Situar o leitor dentro do espírito do trabalho, expondo o assunto tratado no documento, exaltando a importância do assunto, o estado da arte, enfocar áreas controvertidas ou envolvidas e esclarecer a natureza e a extensão da contribuição pretendida com o trabalho.
+
+
+
+	Projeto OO com UML  / Modelo Lógico Relacional
+
+
+	Análise inicial (Abbott)
+
+Nesse momento, identificar candidatos a classes, atributos, métodos e relacionamentos, listando TODOS, em uma tabela para cada um.
+
+
+	Projeto de Classes – Parte 1
+
+Fornecer o Diagrama de Classes com todos os elementos acima. Será considerado:
+
+	- Relacionamentos entre Classes: Associação, Agregação, Composição, Dependência/ Navegabilidade e Generalização (Herança Simples);
+	- Modificadores de acesso de classes, atributos e métodos;
+	- Multiplicidade e Roles.
+
+
+Em suma, deseja-se um Projeto de Classes mais completo possível!!
+
+
+	Projeto de Classes – Parte 2 - MVC
+
+Agora, lançar novamente um olhar para o Diagrama de Classes construído acima e revisá-lo, agora incluindo novas classes ao Projeto e separando-as em Movel – View – Controller.
+
+	Projeto de Banco de Dados
+
+Admitir somente as classes da parte Model do item 2.3 acima e apresentar o Modelo Lógico Relacional para a mesma, usando notação crow´s foot.
+	Penúltima Página - Conclusão:
+
+Deve ser fundamentada nos resultados e na discussão, contendo deduções lógicas correspondentes aos objetivos propostos. A conclusão constitui-se de uma resposta as hipóteses enunciadas. Portanto, o autor manifesta seu ponto de vista sobre os resultados obtidos.
+
+Deve surgir aqui também as dificuldades encontradas e recomendações futuras, para o aprimoramento do curso de Laboratório de Engenharia de Software.
+
+
+
+Última Página – Referências Bibliográficas, na ABNT:
+
+Devem seguir as Normas ABNT para trabalhos Científicos.
+
