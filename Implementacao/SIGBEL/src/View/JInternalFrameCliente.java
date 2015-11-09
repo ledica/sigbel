@@ -1,6 +1,6 @@
 package View;
 
-import Control.ClientDB;
+import Control.ClientDB2;
 import Model.Cliente;
 import java.beans.PropertyVetoException;
 import java.text.ParseException;
@@ -257,7 +257,7 @@ public class JInternalFrameCliente extends javax.swing.JInternalFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         //novo Cadastro
-        ClientDB clientDB = new ClientDB();
+        ClientDB2 clientDB = new ClientDB2();
         try {
             this.cliente = contatoCliente.getDadosFrameClient();
         } catch (ParseException ex) {
@@ -376,7 +376,7 @@ public class JInternalFrameCliente extends javax.swing.JInternalFrame {
             }
             break;
             case "Excluir Cliente": {
-                ClientDB clientbd = new ClientDB();
+                ClientDB2 clientbd = new ClientDB2();
                 if (JOptionPane.showConfirmDialog(rootPane, "Confirma exclusão?", "Confirmação de exlusão de Aluno", 1, 1) == 0) {
                     if (clientbd.deleteClient(cliente)) {
                         JOptionPane.showMessageDialog(this, "Excluido com sucesso!", "Manutenção de Aluno", 1);

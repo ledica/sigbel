@@ -1,7 +1,7 @@
 package View;
 
 import Model.Cliente;
-import Control.ClientDB;
+import Control.ClientDB2;
 import java.util.ArrayList;
 import java.util.HashMap;
 import javax.swing.JOptionPane;
@@ -439,7 +439,7 @@ public class JDialogClient extends javax.swing.JDialog {
 
     private void jButtonSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalvarActionPerformed
         //novo Cadastro
-        ClientDB clientDB = new ClientDB();
+        ClientDB2 clientDB = new ClientDB2();
         if (clientDB.insert(getDadosFrameClient())) {
             JOptionPane.showMessageDialog(this, "Incluido com sucesso!", "Manutenção de Aluno", 1);
         } else {
@@ -560,7 +560,7 @@ private ArrayList<Cliente> getDataTableClient() {
         // atribui um tamanho fixo a coluna codigo
         jTable1.getColumnModel().getColumn(0).setPreferredWidth(2);
 
-        ArrayList<Cliente> listClient = new ClientDB().getListClient();
+        ArrayList<Cliente> listClient = new ClientDB2().getListClient();
         //adiciona alunos as tabelas
 
         for (Cliente client : listClient) {
