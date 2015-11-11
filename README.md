@@ -24,3 +24,7 @@ O produto SIGBEL tem por objetivo auxiliar o profissional de uma pequena clínic
  **Necessidades**    : Cadastro, alteração, exclusão e pesquisa de pagamentos dos serviços realizados para os clientes.
 
  **Benefícios**     : Controle dos débitos dos clientes.
+
+##Modelo Lógico Relacional de Banco de Dados##
+
+![Alt text](/Documentos/modeloLogicoRelacional.png?raw=true "Modelo Lógico Relacional de Banco de Dados")

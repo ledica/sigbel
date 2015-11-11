@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author leticia
+ * @author root
  */
 @Entity
 @Table(name = "ProtocoloAtendimento")
@@ -33,15 +33,15 @@ public class ProtocoloAtendimento implements Serializable {
     @Basic(optional = false)
     @Column(name = "idProtocoloAtendimento")
     private Integer idProtocoloAtendimento;
-    @JoinColumn(name = "idRegiaoGordura", referencedColumnName = "idRegiaoGordura")
-    @ManyToOne(optional = false)
-    private RegiaoGorduraLocalizada idRegiaoGordura;
-    @JoinColumn(name = "idProtocolo", referencedColumnName = "idProtocolo")
-    @ManyToOne(optional = false)
-    private Protocolo idProtocolo;
     @JoinColumn(name = "idConsulta", referencedColumnName = "idConsulta")
     @ManyToOne(optional = false)
     private Atendimento idConsulta;
+    @JoinColumn(name = "idProtocolo", referencedColumnName = "idProtocolo")
+    @ManyToOne(optional = false)
+    private Protocolo idProtocolo;
+    @JoinColumn(name = "idRegiaoGordura", referencedColumnName = "idRegiaoGordura")
+    @ManyToOne(optional = false)
+    private RegiaoGorduraLocalizada idRegiaoGordura;
 
     public ProtocoloAtendimento() {
     }
@@ -58,12 +58,12 @@ public class ProtocoloAtendimento implements Serializable {
         this.idProtocoloAtendimento = idProtocoloAtendimento;
     }
 
-    public RegiaoGorduraLocalizada getIdRegiaoGordura() {
-        return idRegiaoGordura;
+    public Atendimento getIdConsulta() {
+        return idConsulta;
     }
 
-    public void setIdRegiaoGordura(RegiaoGorduraLocalizada idRegiaoGordura) {
-        this.idRegiaoGordura = idRegiaoGordura;
+    public void setIdConsulta(Atendimento idConsulta) {
+        this.idConsulta = idConsulta;
     }
 
     public Protocolo getIdProtocolo() {
@@ -74,12 +74,12 @@ public class ProtocoloAtendimento implements Serializable {
         this.idProtocolo = idProtocolo;
     }
 
-    public Atendimento getIdConsulta() {
-        return idConsulta;
+    public RegiaoGorduraLocalizada getIdRegiaoGordura() {
+        return idRegiaoGordura;
     }
 
-    public void setIdConsulta(Atendimento idConsulta) {
-        this.idConsulta = idConsulta;
+    public void setIdRegiaoGordura(RegiaoGorduraLocalizada idRegiaoGordura) {
+        this.idRegiaoGordura = idRegiaoGordura;
     }
 
     @Override
@@ -104,7 +104,7 @@ public class ProtocoloAtendimento implements Serializable {
 
     @Override
     public String toString() {
-        return "dominio.ProtocoloAtendimento[ idProtocoloAtendimento=" + idProtocoloAtendimento + " ]";
+        return "Model.ProtocoloAtendimento[ idProtocoloAtendimento=" + idProtocoloAtendimento + " ]";
     }
     
 }

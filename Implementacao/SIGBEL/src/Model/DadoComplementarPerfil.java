@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author leticia
+ * @author root
  */
 @Entity
 @Table(name = "DadoComplementarPerfil")
@@ -115,7 +115,7 @@ public class DadoComplementarPerfil implements Serializable {
 
     @Override
     public String toString() {
-        return "dominio.DadoComplementarPerfil[ idDadoComplementarPerfil=" + idDadoComplementarPerfil + " ]";
+        return "Model.DadoComplementarPerfil[ idDadoComplementarPerfil=" + idDadoComplementarPerfil + " ]";
     }
     
 }

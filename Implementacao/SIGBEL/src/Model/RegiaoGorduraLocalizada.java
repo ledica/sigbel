@@ -21,7 +21,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author leticia
+ * @author root
  */
 @Entity
 @Table(name = "RegiaoGorduraLocalizada")
@@ -95,7 +95,7 @@ public class RegiaoGorduraLocalizada implements Serializable {
 
     @Override
     public String toString() {
-        return "dominio.RegiaoGorduraLocalizada[ idRegiaoGordura=" + idRegiaoGordura + " ]";
+        return "Model.RegiaoGorduraLocalizada[ idRegiaoGordura=" + idRegiaoGordura + " ]";
     }
     
 }

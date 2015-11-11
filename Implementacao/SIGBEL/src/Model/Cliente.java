@@ -27,7 +27,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author leticia
+ * @author root
  */
 @Entity
 @Table(name = "Cliente")
@@ -225,11 +225,11 @@ public class Cliente implements Serializable {
         this.idCliente = idCliente;
     }
 
-    public String getNome() {
+    public String getNomeCliente() {
         return nomeCliente;
     }
 
-    public void setNome(String nomeCliente) {
+    public void setNomeCliente(String nomeCliente) {
         this.nomeCliente = nomeCliente;
     }
 
@@ -675,11 +675,22 @@ public class Cliente implements Serializable {
 
     @Override
     public String toString() {
-        return "dominio.Cliente[ idCliente=" + idCliente + " ]";
+        return "Model.Cliente[ idCliente=" + idCliente + " ]";
     }
 
-    public Object getIdade() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Cliente(Integer idCliente, String nomeCliente, String numeroCPF, String numeroRG, String endereco, String bairro, String cidade, String numeroEndereco, String telefone, String email, Date dataNascimento, Date dataCadastro) {
+        this.idCliente = idCliente;
+        this.nomeCliente = nomeCliente;
+        this.numeroCPF = numeroCPF;
+        this.numeroRG = numeroRG;
+        this.endereco = endereco;
+        this.bairro = bairro;
+        this.cidade = cidade;
+        this.numeroEndereco = numeroEndereco;
+        this.telefone = telefone;
+        this.email = email;
+        this.dataNascimento = dataNascimento;
+        this.dataCadastro = dataCadastro;
     }
     
 }

@@ -28,7 +28,7 @@ public class ClientDB2 {
             String sql = "INSERT INTO Cliente (nomeCliente,telefone,email,dataNascimento,"
                     + "dataCadastro,endereco,numeroEndereco,bairro,cidade,ocupacao,"
                     + "profissao,sexo,numeroCPF,numeroRG) VALUES ('"
-                    + client.getNome() + "','" + client.getTelefone() + "','"
+                    + client.getNomeCliente() + "','" + client.getTelefone() + "','"
                     + client.getEmail() + "','" + dataSql + "','" + dataSql2 + "','"
                     + client.getEndereco() + "','" + client.getNumeroEndereco() + "','"
                     + client.getBairro() + "','" + client.getCidade() + "','" + client.getOcupacao() + "','"
@@ -64,7 +64,7 @@ public class ClientDB2 {
         try {
             stmt = connection.createStatement();
 
-            String sql = "UPDATE Cliente SET nomeCliente = '" + client.getNome() + "' WHERE codaluno = " + client.getIdCliente() + ";";
+            String sql = "UPDATE Cliente SET nomeCliente = '" + client.getNomeCliente() + "' WHERE codaluno = " + client.getIdCliente() + ";";
             System.out.println("SQL: " + sql);
             stmt.executeUpdate(sql);
             // Incluindo client na listaClientes que vai ser retornada
@@ -97,13 +97,13 @@ public class ClientDB2 {
             while (rs.next()) {
                 Cliente client = new Cliente(rs.getInt("idCliente"),
                         rs.getString("nomeCliente"), rs.getString("numeroCPF"),
-                        rs.getString("numeroRG"), rs.getDate("dataNascimento"),
+                        rs.getString("numeroRG"),
                         rs.getString("endereco"), rs.getString("numeroEndereco"),
                         rs.getString("bairro"), rs.getString("cidade"), rs.getString("telefone"),
-                        rs.getString("email"), rs.getDate("dataCadastro")
+                        rs.getString("email"), rs.getDate("dataCadastro"), rs.getDate("dataNascimento")
                 );
                 Statement stmt2 = connection.createStatement();
-           
+
                 listClient.add(client);
             }
         } catch (SQLException e) {
@@ -152,4 +152,22 @@ public class ClientDB2 {
         }
     }//fim do metodo que deleta o cliente
 
+    public static void main(String ars[]) {
+        ClientDB2 clientDB2 = new ClientDB2();
+        Cliente c = new Cliente();
+        c.setNomeCliente("Maria");
+        c.setNumeroCPF("23423423");
+        c.setNumeroRG("234234234");
+        c.setSexo("F");
+        java.util.Date dataUtil = new java.util.Date();
+        c.setDataCadastro(dataUtil);
+        c.setDataNascimento(dataUtil);
+        
+        if(clientDB2.insert(c)){
+        System.out.print("ok");
+        }else{
+        System.out.print("erro ao inserir");
+        };
+       
+    }
 }

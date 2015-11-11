@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author leticia
+ * @author root
  */
 @Entity
 @Table(name = "Cirurgia")
@@ -119,7 +119,7 @@ public class Cirurgia implements Serializable {
 
     @Override
     public String toString() {
-        return "dominio.Cirurgia[ idDadoComplementar=" + idDadoComplementar + " ]";
+        return "Model.Cirurgia[ idDadoComplementar=" + idDadoComplementar + " ]";
     }
     
 }

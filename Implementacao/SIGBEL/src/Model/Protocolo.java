@@ -21,7 +21,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author leticia
+ * @author root
  */
 @Entity
 @Table(name = "Protocolo")
@@ -95,7 +95,7 @@ public class Protocolo implements Serializable {
 
     @Override
     public String toString() {
-        return "dominio.Protocolo[ idProtocolo=" + idProtocolo + " ]";
+        return "Model.Protocolo[ idProtocolo=" + idProtocolo + " ]";
     }
     
 }

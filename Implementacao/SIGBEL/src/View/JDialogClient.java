@@ -564,7 +564,7 @@ private ArrayList<Cliente> getDataTableClient() {
         //adiciona alunos as tabelas
 
         for (Cliente client : listClient) {
-            model.addRow(new Object[]{client.getIdCliente(), client.getNome(),
+            model.addRow(new Object[]{client.getIdCliente(), client.getNomeCliente(),
                 client.getNumeroRG(), client.getNumeroCPF(), client.getTelefone()
             });
 
@@ -580,7 +580,7 @@ private ArrayList<Cliente> getDataTableClient() {
     private Cliente getDadosFrameClient() {
         Cliente client = new Cliente();
         client.setIdCliente(Integer.parseInt(this.jTextFieldCodigo.getText()));
-        client.setNome(this.jTextFieldNome.getText());
+        client.setNomeCliente(this.jTextFieldNome.getText());
         client.setBairro(this.jTextFieldBairro.getText());
         client.setCidade(this.jTextFieldCidade.getText());
         client.setEmail(this.jTextFieldEmail.getText());

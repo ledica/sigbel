@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author leticia
+ * @author root
  */
 @Entity
 @Table(name = "Pagamento")
@@ -131,7 +131,7 @@ public class Pagamento implements Serializable {
 
     @Override
     public String toString() {
-        return "dominio.Pagamento[ idPagamento=" + idPagamento + " ]";
+        return "Model.Pagamento[ idPagamento=" + idPagamento + " ]";
     }
     
 }

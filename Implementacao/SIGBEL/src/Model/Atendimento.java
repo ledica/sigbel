@@ -28,7 +28,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author leticia
+ * @author root
  */
 @Entity
 @Table(name = "Atendimento")
@@ -110,32 +110,6 @@ public class Atendimento implements Serializable {
 
     public Atendimento() {
     }
-
-    public Atendimento(Integer idAtendimento, Float apendiceXifoide, Float anguloDeTales, Float abdomeInferior, Float peso, Float axilar, Float bracoDireito10cm, Float bracoDireito20cm, Float bracoEsquerdo10cm, Float bracoEsquerdo20cm, Float coxaDireita10cm, Float coxaDireita20cm, Float coxaDireita30cm, Float coxaEsquerda10cm, Float coxaEsquerda20cm, Float coxaEsquerda30cm, Float pernaDireita10cm, Float pernaDireita20cm, Float pernaEsquerda20cm, Consulta idConsulta) {
-        this.idAtendimento = idAtendimento;
-        this.apendiceXifoide = apendiceXifoide;
-        this.anguloDeTales = anguloDeTales;
-        this.abdomeInferior = abdomeInferior;
-        this.peso = peso;
-        this.axilar = axilar;
-        this.bracoDireito10cm = bracoDireito10cm;
-        this.bracoDireito20cm = bracoDireito20cm;
-        this.bracoEsquerdo10cm = bracoEsquerdo10cm;
-        this.bracoEsquerdo20cm = bracoEsquerdo20cm;
-        this.coxaDireita10cm = coxaDireita10cm;
-        this.coxaDireita20cm = coxaDireita20cm;
-        this.coxaDireita30cm = coxaDireita30cm;
-        this.coxaEsquerda10cm = coxaEsquerda10cm;
-        this.coxaEsquerda20cm = coxaEsquerda20cm;
-        this.coxaEsquerda30cm = coxaEsquerda30cm;
-        this.pernaDireita10cm = pernaDireita10cm;
-        this.pernaDireita20cm = pernaDireita20cm;
-        this.pernaEsquerda20cm = pernaEsquerda20cm;
-        this.idConsulta = idConsulta;
-    }
-
-   
-    
 
     public Atendimento(Integer idAtendimento) {
         this.idAtendimento = idAtendimento;
@@ -340,7 +314,7 @@ public class Atendimento implements Serializable {
 
     @Override
     public String toString() {
-        return "dominio.Atendimento[ idAtendimento=" + idAtendimento + " ]";
+        return "Model.Atendimento[ idAtendimento=" + idAtendimento + " ]";
     }
     
 }
