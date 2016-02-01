@@ -43,7 +43,7 @@ class m_cliente extends CI_Model {
         if ($id) {
             $this->db->where('idCliente', $id);
         }
-        $this->db->order_by("idCliente", 'desc');
+        $this->db->order_by("nomeCliente", 'ASC');
         return $this->db->get('Cliente');
     }
 

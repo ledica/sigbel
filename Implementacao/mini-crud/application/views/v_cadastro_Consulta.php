@@ -44,3 +44,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     </div>	
 </div>
+
+<!-- Select2 -->
+<script src="<?= base_url('template/plugins/select2/select2.full.min.js') ?>"></script>     
+<script src="<?= base_url('template/plugins/datepicker/bootstrap-datepicker.js') ?>"></script>	
+<script src="<?= base_url('template/plugins/timepicker/bootstrap-timepicker.js') ?>"></script>	
+
+<script>
+
+    $(function () {
+        //Initialize Select2 Elements
+        $(".select2").select2();
+        //Datemask dd/mm/yyyy
+        $("#data").datepicker({
+            dateFormat: 'dd/mm/yy', altField: '#dbDate', altFormat: 'yy-mm-dd',
+        });
+        $("#dataNascimento").datepicker({
+            dateFormat: 'dd/mm/yy', altField: '#dbDate', altFormat: 'yy-mm-dd',
+        });
+        $("#dataCadastro").datepicker({
+            dateFormat: 'dd/mm/yy', altField: '#dbDate', altFormat: 'yy-mm-dd',
+        });
+        $("#dataUltimaGestacao").datepicker({
+            dateFormat: 'dd/mm/yy', altField: '#dbDate', altFormat: 'yy-mm-dd',
+        });
+        $("#dataUltimaMenstruacao").datepicker({
+            dateFormat: 'dd/mm/yy', altField: '#dbDate', altFormat: 'yy-mm-dd',
+        });
+        $("#dataInicioAnticoncepcional").datepicker({
+            dateFormat: 'dd/mm/yy', altField: '#dbDate', altFormat: 'yy-mm-dd',
+        });
+        $("#tempoAlergia").datepicker({
+            dateFormat: 'dd/mm/yy', altField: '#dbDate', altFormat: 'yy-mm-dd',
+        });
+        $("#tempoCirurgia").datepicker({
+            dateFormat: 'dd/mm/yy', altField: '#dbDate', altFormat: 'yy-mm-dd',
+        });
+        $("#horario").timepicker();
+    });</script>

@@ -25,10 +25,9 @@ class Cliente extends CI_Controller {
 
         $idCliente = $this->session->userdata('idCliente');
         if ($idCliente > 0) {
-          
             $variaveis['quantidadeConsultaAgendada'] = $quantidadeConsultaAgendada;
             $variaveis['Atendimento'] = $this->m_atendimento->get(null, $idCliente);
-            $this->template->load('template', 'v_relatorioAtendimento', $variaveis);
+            $this->load->view('v_relatorioAtendimento', $variaveis);
         }
     }
 
@@ -372,8 +371,12 @@ class Cliente extends CI_Controller {
      * @param $id do registro
      * @return view
      */
-    public function edit() {
-        $id = $this->session->userdata('idCliente');
+    public function edit($idCliente = NULL) {
+        if ($this->session->userdata('idCliente')) {
+            $id = $this->session->userdata('idCliente');
+        } else {
+            $id = $idCliente;
+        }
         if ($id) {
 
             $cadastros = $this->m_cliente->get($id);

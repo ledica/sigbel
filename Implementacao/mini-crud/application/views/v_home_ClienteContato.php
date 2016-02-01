@@ -1,13 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
+<?= link_tag('template/plugins/datatables/dataTables.bootstrap.css') ?>
+
 <section class="content">        
     <div class="row">
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-header">
                     <h3 class="box-title">Lista de Clientes</h3>
-        <?= anchor('cliente/create', '<i class="fa fa-plus"></i> Novo Cliente', array('class' => 'btn btn-default pull-right')); ?>
+                    <?= anchor('cliente/create', '<i class="fa fa-plus"></i> Novo Cliente', array('class' => 'btn btn-default pull-right')); ?>
                 </div><!-- /.box-header -->
                 <div class="box-body">
                     <?php if ($Cliente->num_rows() > 0): ?>  
@@ -75,3 +77,70 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
+
+<!-- REQUIRED JS SCRIPTS -->
+
+
+<script>
+
+    var base_url = "<?= base_url(); ?>";
+
+    $(function () {
+        $('.confirma_exclusao').on('click', function (e) {
+            e.preventDefault();
+
+            var nome = $(this).data('nome');
+            var id = $(this).data('id');
+
+            $('#modal_confirmation').data('nome', nome);
+            $('#modal_confirmation').data('id', id);
+            $('#modal_confirmation').modal('show');
+        });
+
+        $('#modal_confirmation').on('show.bs.modal', function () {
+            var nome = $(this).data('nome');
+            $('#nome_exclusao').text(nome);
+        });
+
+        $('#btn_excluir_cliente').click(function () {
+            var id = $('#modal_confirmation').data('id');
+            document.location.href = base_url + "cliente/delete/" + id;
+        });
+        $('#btn_excluir_consulta').click(function () {
+            var id = $('#modal_confirmation').data('id');
+            document.location.href = base_url + "consulta/delete/" + id;
+        });
+        $('#btn_excluir_atendimento').click(function () {
+            var id = $('#modal_confirmation').data('id');
+            document.location.href = base_url + "atendimento/delete/" + id;
+        });
+        $('#btn_excluir_pagamento').click(function () {
+            var id = $('#modal_confirmation').data('id');
+            document.location.href = base_url + "pagamento/delete/" + id;
+        });
+        $('#btn_excluir_protocolo').click(function () {
+            var id = $('#modal_confirmation').data('id');
+            document.location.href = base_url + "ProtocoloAtendimento/delete/" + id;
+        });
+    });
+</script>
+<!-- DataTables -->
+<script src="<?= base_url('template/plugins/datatables/jquery.dataTables.min.js') ?>"></script>	
+<script src="<?= base_url('template/plugins/datatables/dataTables.bootstrap.min.js') ?>"></script>	
+<!-- AdminLTE for demo purposes -->
+<script src="<?= base_url('template/dist/js/demo.js') ?>"></script>	
+<!-- page script -->
+<script>
+    $(function () {
+        $('#example1').DataTable({
+            "paging": true,
+            "lengthChange": true,
+            "searching": true,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false
+        });
+    });
+
+</script>
